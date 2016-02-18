@@ -1,0 +1,91 @@
+---
+-- Author: Saurav Shandilya
+-- Description: Comparator
+
+---
+
+---library 
+Library ieee;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+entity comparator_4bit is
+port
+(
+  comp_in1 : in bit_vector(3 downto 0) ;
+  comp_in2 : in bit_vector(3 downto 0) ;
+  
+  eql,grt,lss : out bit 
+);
+
+end comparator_4bit;
+
+
+architecture arch of comparator_4bit is
+  
+component myand 
+   port( in1, in2 : in bit;
+            out1 : out bit);
+end component; 
+
+component mynot					
+   port( in1 : in bit;
+        out1 : out bit);
+end component;
+
+component myor
+   port( in1, in2 : in bit;
+            out1 : out bit);
+end component;
+
+component myxor			
+   port( in1, in2 : in bit;
+            out1 : out bit);
+end component;
+
+component mynor					
+   port( in1, in2 : in bit;
+            out1 : out bit);
+end component; 
+
+component fullAdder
+   port( A, B, Cin : in bit;
+         sum, Cout : out bit);
+end component; 
+
+---- signals
+
+signal inv : bit_vector(3 downto 0);  -- inverter  
+signal C : bit_vector(3 downto 0);    -- full adder carry
+signal S : bit_vector(3 downto 0);    
+signal Cin : bit := '1';              -- full adder Cin  = 1
+signal orTop, orBot  : bit;           -- or out
+signal xor1, xor2    : bit;
+signal nor1          : bit;
+  
+
+begin
+    inv_gen: for i in 0 to 3 generate
+        inv1: mynot  port map(comp_in2(i), inv(i)); -- D0
+	end generate inv_gen; 
+
+   FA0: fullAdder port map(comp_in1(0), inv(0), Cin, S(0), C(0)); -- S0
+   add_gen: for i in 1 to 3 generate
+        add1: fullAdder port map(comp_in1(i), inv(i), C(i-1), S(i), C(i)); -- S0
+	end generate add_gen; 
+	
+   G_O1: myor port map(S(0), S(1), orTop);
+   G_O2: myor port map(S(2), S(3), orBot);
+   G_N: mynor port map(orTop, orBot, nor1);
+
+   G_X1: myxor port map(C(2), C(3), xor1);
+   G_X2: myxor port map(S(3), xor1, xor2);
+   
+   ---------FINAL OUTPUTS
+   eql <= nor1;
+   G_GRT: mynor port map(nor1, xor2, grt);
+   lss <= xor2;  
+  
+  
+  
+end arch;
+

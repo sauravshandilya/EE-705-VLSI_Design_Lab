@@ -1,0 +1,198 @@
+-------------------------
+-- Author: Saurav Shandilya 
+-- Roll No: 153076004, Electronics System, EE, IIT Bombay
+-- EE-705 VLSI Design Lab (Course Instructor: Prof. Virendra Singh)
+-- Description: Booth Multiplier COntroller implementation
+-------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
+
+entity bmcontroller is
+  port (
+    
+	sysclk:	in bit;	-- system clock
+	reset: in bit;	
+	done:out bit;	-- output
+    
+	
+	---- Signal from datapath	
+	countstatus: in std_logic_vector(3 downto 0);     -- checks status of counter. leave in std_logic
+	
+	---- Signal to datapath
+	
+  enable_multiplier_reg: out bit;
+	reset_multiplier_reg: out bit;
+
+	enable_multiplicand_reg: out bit;
+	reset_multiplicand_reg: out bit;
+
+	enable_out_reg: out bit;
+	reset_out_reg: out bit;
+	
+	enable_buffadder_reg:out bit;
+	reset_buffadder_reg: out bit;
+	
+	enable_buffshifter_reg: out bit;
+	reset_buffshifter_reg: out bit;
+
+	enable_shiftreg: out bit;
+	reset_shiftreg: out bit;
+	
+	counter_reset: out bit;
+	counter_enable: out bit;
+	
+	loadmuxsel: out bit
+);
+end bmcontroller;
+
+---- architecture starts 
+
+architecture behav of bmcontroller is
+--state description
+type mystate is (s_idle,s_ready,s_initialize,s_wait1,s_add,s_shift,s_count,s_loop,s_done);
+  
+  signal state_signal : mystate;
+  signal muxload : bit := '1';
+  
+-- begin
+begin
+next_state: process (reset,sysclk)
+    variable next_state_var : myState;
+  begin  -- process next_state
+    next_state_var := state_signal;
+
+    if reset = '1' then           -- if reset =1 remain in idle state
+      next_state_var := s_idle;
+    else
+      case state_signal is
+
+        when s_idle => 
+          if(reset = '0') then      -- change state when reset goes low
+            next_state_var := s_ready;
+          end if;  
+
+        when s_ready =>
+            next_state_var := s_initialize;   
+
+        when s_initialize =>
+            next_state_var := s_wait1;
+            
+        when s_wait1 =>
+            next_state_var := s_add;   
+
+        when s_add =>
+            next_state_var := s_shift;   
+        
+        when s_shift =>
+            next_state_var := s_count;
+        
+        when s_count => 
+            next_state_var := s_loop;
+                                
+        when s_loop =>
+          if countstatus = "1000" then
+            next_state_var := s_done;
+          else
+            next_state_var := s_wait1;
+          end if;
+          
+        when s_done =>
+            next_state_var := s_idle;
+                 
+        when others => null;
+      end case;
+    end if;
+
+    if(sysclk'event and sysclk = '1') then
+      state_signal <= next_state_var;
+    end if;
+      
+end process next_state;
+    
+output_process: process(state_signal,reset,countstatus)
+begin
+  
+  enable_multiplier_reg <= '0';
+	reset_multiplier_reg <= '0';
+	enable_multiplicand_reg <= '0';
+	reset_multiplicand_reg <= '0';
+	enable_out_reg <= '0';
+	reset_out_reg <= '0';
+	enable_buffadder_reg <= '0';
+	reset_buffadder_reg <= '0';
+	enable_buffshifter_reg <= '0';
+	reset_buffshifter_reg <= '0';
+	enable_shiftreg <= '0';
+	reset_shiftreg <= '0';
+	
+	counter_reset<= '0';
+	counter_enable<= '0';
+	
+	--loadmuxsel<= '0';
+	
+	done <= '0';
+	
+	case state_signal is
+	  
+	  when s_idle =>               --- reset all registers to zero
+	  	reset_multiplier_reg <= '1';
+    	reset_multiplicand_reg <= '1';
+    	reset_out_reg <= '1';
+    	reset_buffadder_reg <= '1';
+    	reset_buffshifter_reg <= '1';
+    	reset_shiftreg <= '1';
+    	counter_reset<= '1';
+    	
+    	done <= '0';     -- disable done flag
+    
+    when s_ready =>
+     enable_multiplier_reg <= '1';
+	   enable_shiftreg <= '1';
+	   loadmuxsel<= '0';
+    
+	  when s_initialize =>
+	   enable_multiplier_reg <= '1';
+	   enable_shiftreg <= '1';
+	   loadmuxsel<= '0';
+	   enable_buffadder_reg <= '1';
+     enable_multiplicand_reg <= '1';
+	  
+	  when s_wait1 =>
+     enable_multiplier_reg <= '1';
+	   enable_shiftreg <= '1';
+	   enable_buffadder_reg <= '1';
+     enable_multiplicand_reg <= '1';
+	    
+	  when s_add => 
+	   enable_buffadder_reg <= '1';
+     enable_multiplicand_reg <= '1';
+	   enable_buffshifter_reg <= '1';
+     enable_shiftreg <= '1';       
+	  
+	  when s_shift =>
+	    enable_buffshifter_reg <= '1';
+	    enable_shiftreg <= '1';
+	    loadmuxsel <= muxload;	
+
+	  when s_count =>
+ 	    enable_shiftreg <= '1';
+      counter_enable <= '1';
+      loadmuxsel <= muxload;	
+	  
+	  when s_loop =>
+	    if countstatus = "111" then 
+	      enable_out_reg <= '1';
+	    end if;
+	    loadmuxsel <= muxload;	
+	    
+	  when s_done => 
+	    enable_out_reg <= '1';   
+      done <= '1';
+    
+    when others =>null;
+      
+  end case;
+end process output_process;
+end behav;

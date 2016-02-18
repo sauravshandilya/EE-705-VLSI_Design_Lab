@@ -1,0 +1,16 @@
+v 4
+file . "fullAdder_tb.vhd" "144c7b00cb3f02a267286da6744ef1fa1096a4cd" "20160120181222.011":
+  entity fulladder_tb at 21( 730) + 0 on 27;
+  architecture arch of fulladder_tb at 27( 816) + 0 on 28;
+  configuration cfg_tb at 149( 3967) + 0 on 29;
+file . "fullAdder.vhd" "a113e78ae0f5886edd321874ca01a8b59bfd4d37" "20160120180106.434":
+  entity andgate at 7( 149) + 0 on 11;
+  architecture arch of andgate at 17( 314) + 0 on 12;
+  entity xorgate at 23( 408) + 0 on 13;
+  architecture arch of xorgate at 33( 573) + 0 on 14;
+  entity halfadder at 40( 663) + 0 on 15;
+  architecture arch of halfadder at 48( 806) + 0 on 16;
+  entity orgate at 66( 1219) + 0 on 17;
+  architecture arch of orgate at 76( 1382) + 0 on 18;
+  entity fulladder at 83( 1477) + 0 on 19;
+  architecture arch of fulladder at 91( 1631) + 0 on 20;

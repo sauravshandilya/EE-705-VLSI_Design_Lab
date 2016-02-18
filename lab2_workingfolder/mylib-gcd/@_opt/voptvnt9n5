@@ -1,0 +1,961 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder
+T_opt
+VjY[@AQfMGGmQH62Glde4b0
+04 14 5 work gcd_controller behav 1
+=1-dca97144b61e-56ad6ce1-c7-1740
+o-quiet -auto_acc_if_foreign -work mylib-gcd
+n@_opt
+OL;O;10.1c;51
+Eandgate
+Z1 w1453798989
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dE:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder
+Z5 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mux2to1.vhd
+Z6 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mux2to1.vhd
+l0
+L11
+VVWNe5FWm15D;D>dIh7kzT2
+Z7 OL;C;10.1c;51
+32
+Z8 !s108 1454193146.650000
+Z9 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mux2to1.vhd|
+Z10 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mux2to1.vhd|
+Z11 o-work mylib-gcd -2002 -explicit
+Z12 tExplicit 1
+!s100 m`InbN_<BdLzXiFKfRoeX0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 7 andgate 0 22 VWNe5FWm15D;D>dIh7kzT2
+32
+l18
+L17
+Vg8@o?LQfYg@zNFmRzo^B20
+R7
+R8
+R9
+R10
+R11
+R12
+!s100 S4<TjHOT>2BlBChSTSXHU2
+!i10b 1
+Ecomparator_2bit
+Z13 w1454173783
+R2
+R3
+R4
+Z14 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_2bit.vhd
+Z15 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_2bit.vhd
+l0
+L11
+VnibLnNZo?fVmnXN03n_Xk3
+R7
+32
+Z16 !s108 1454173783.869000
+Z17 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_2bit.vhd|
+Z18 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_2bit.vhd|
+R11
+R12
+!s100 ciLnSj;[7[f_99e3mX>Y12
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 15 comparator_2bit 0 22 nibLnNZo?fVmnXN03n_Xk3
+32
+l58
+L25
+VDX^eO<iV_d?z2093?`]7U0
+R7
+R16
+R17
+R18
+R11
+R12
+!s100 <Me_`z?nDbXOn?QHNGaTj2
+!i10b 1
+Ecomparator_4bit
+Z19 w1454162461
+R2
+R3
+R4
+Z20 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_4bit.vhd
+Z21 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_4bit.vhd
+l0
+L11
+VgKV?TWdlR6U[bU;NN7eSI1
+R7
+32
+Z22 !s108 1454172128.313000
+Z23 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_4bit.vhd|
+Z24 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/comparator_4bit.vhd|
+R11
+R12
+!s100 1o1eR2[FgDCNgCnhfKH1F1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 15 comparator_4bit 0 22 gKV?TWdlR6U[bU;NN7eSI1
+l66
+L23
+VYZMIN`YHKQUmikUfGV?5a0
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 o8fU^T_@Af8ERL@dKPaeD1
+!i10b 1
+Ecomparator_8bit
+Z25 w1454191215
+R2
+R3
+R4
+Z26 8E:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\comparator_8bit.vhd
+Z27 FE:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\comparator_8bit.vhd
+l0
+L11
+VV1gVATJN8QeGbNnkUAG;f2
+R7
+32
+Z28 !s108 1454193145.896000
+Z29 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\comparator_8bit.vhd|
+Z30 !s107 E:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\comparator_8bit.vhd|
+R11
+R12
+!s100 C9En5PURE:b7eO6lR@O033
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 15 comparator_8bit 0 22 V1gVATJN8QeGbNnkUAG;f2
+32
+l63
+L23
+V_=fm7K1?IO4dR<Q2z6[9k0
+R7
+R28
+R29
+R30
+R11
+R12
+!s100 Ja[QdXMdh3_kodM5X2cAY3
+!i10b 1
+Edemux_1to2
+Z31 w1454114421
+R2
+R3
+R4
+Z32 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2.vhd
+Z33 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2.vhd
+l0
+L4
+V`5mnDWHMLMfIQh??aU4m01
+R7
+32
+Z34 !s108 1454172122.939000
+Z35 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2.vhd|
+Z36 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2.vhd|
+R11
+R12
+!s100 PBnEzaGKS>QnA]=BZBebS3
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 10 demux_1to2 0 22 `5mnDWHMLMfIQh??aU4m01
+l25
+L11
+VAj_^0>OPIWbl0DLdCD]i41
+R7
+32
+R34
+R35
+R36
+R11
+R12
+!s100 UW]AghGgNYeLWdXzOXSY51
+!i10b 1
+Edemux_1x2_nbit
+Z37 w1454115927
+Z38 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z39 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2_8bit.vhd
+Z40 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2_8bit.vhd
+l0
+L6
+VlLH_c3bW=3c<>8H6a=GVo2
+R7
+32
+Z41 !s108 1454172123.325000
+Z42 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2_8bit.vhd|
+Z43 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/demux_1x2_8bit.vhd|
+R11
+R12
+!s100 f8=DmjHgRbV5NXdg>hgAh3
+!i10b 1
+Aarch
+R38
+R2
+R3
+DEx4 work 14 demux_1x2_nbit 0 22 lLH_c3bW=3c<>8H6a=GVo2
+l29
+L15
+VFLIzJd<dY8[f6>W@3eVMT1
+R7
+32
+R41
+R42
+R43
+R11
+R12
+!s100 e7_ZO_n]DHAm3Jn97UPA`2
+!i10b 1
+Efulladder
+Z44 w1454048302
+R2
+R3
+R4
+Z45 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/fullAdderSub8bit.vhd
+Z46 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/fullAdderSub8bit.vhd
+l0
+L88
+VZ5c4oMfd_am7dz<4z3OiM3
+R7
+32
+Z47 !s108 1454193140.805000
+Z48 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/fullAdderSub8bit.vhd|
+Z49 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/fullAdderSub8bit.vhd|
+R11
+R12
+!s100 97im`i`13[CUGOFFXd;OP3
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 9 fulladder 0 22 Z5c4oMfd_am7dz<4z3OiM3
+32
+l107
+L93
+VQOXmlJMAO8:BU8TGL00fP0
+R7
+R47
+R48
+R49
+R11
+R12
+!s100 V;Xod630bIT7kNSdj0Qd;1
+!i10b 1
+Efulladder_8bit
+R44
+R2
+R3
+R4
+R45
+R46
+l0
+L117
+V2G]AV^U0;NKV9hWmic29o1
+R7
+32
+R47
+R48
+R49
+R11
+R12
+!s100 fEWVh7GadT6D8U32@BjQ60
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 14 fulladder_8bit 0 22 2G]AV^U0;NKV9hWmic29o1
+32
+l137
+L123
+VX9AYDJ=^7ZSDYM3lCLQb91
+R7
+R47
+R48
+R49
+R11
+R12
+!s100 _]RB62I2iR8JCK>5mWGo91
+!i10b 1
+Efulladdsub
+R44
+R2
+R3
+R4
+R45
+R46
+l0
+L152
+VPo:8oSSYP4@c`[7XhY=1k0
+R7
+32
+R47
+R48
+R49
+R11
+R12
+!s100 kBINbJ_1AHg9cWEiEQMOo0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 10 fulladdsub 0 22 Po:8oSSYP4@c`[7XhY=1k0
+32
+l176
+L161
+VM5m:acXEXEG]Yh`bcae7R2
+R7
+R47
+R48
+R49
+R11
+R12
+!s100 U@dE8oA_2M_T7]Qi>DOT_2
+!i10b 1
+Egcd_controller
+Z50 w1454206152
+R38
+R2
+R3
+R4
+Z51 8E:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\controller_gcd.vhd
+Z52 FE:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\controller_gcd.vhd
+l0
+L12
+VOeM2B@HC;7zI@W3fUi0n[2
+R7
+32
+Z53 !s108 1454206160.881000
+Z54 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\controller_gcd.vhd|
+Z55 !s107 E:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\lab2_workingfolder\controller_gcd.vhd|
+R11
+R12
+!s100 n1^3ARSZ2a?I_7Rl0P[Bk3
+!i10b 1
+Abehav
+R38
+R2
+R3
+DEx4 work 14 gcd_controller 0 22 OeM2B@HC;7zI@W3fUi0n[2
+l63
+L55
+V;>FFNYiG5S@VECJ:h56S=1
+R7
+32
+R53
+R54
+R55
+R11
+R12
+!s100 ]:j=L=<ERnZ7;Do;5=95@1
+!i10b 1
+Egcd_datapath
+Z56 w1454198141
+R38
+R2
+R3
+R4
+Z57 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/datapath_gcd.vhd
+Z58 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/datapath_gcd.vhd
+l0
+L14
+VoOg52_DY[O9DHS^g258Y_2
+R7
+32
+Z59 !s108 1454198157.901000
+Z60 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/datapath_gcd.vhd|
+Z61 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/datapath_gcd.vhd|
+R11
+R12
+!s100 :Q@TOldmbYkV<Fl>60OQg1
+!i10b 1
+Aarch
+R38
+R2
+R3
+DEx4 work 12 gcd_datapath 0 22 oOg52_DY[O9DHS^g258Y_2
+32
+l112
+L54
+VACkgW2Jnn3gR@CViM=C9<0
+R7
+R59
+R60
+R61
+R11
+R12
+!s100 :S?>jZal^B1cEIIH0e1>S0
+!i10b 1
+Ehalfadder
+R44
+R2
+R3
+R4
+R45
+R46
+l0
+L45
+VeC?MzSKnoNjK_64zg26PY0
+R7
+32
+R47
+R48
+R49
+R11
+R12
+!s100 iZdFTCF1PIZmFndfdh9QR1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 9 halfadder 0 22 eC?MzSKnoNjK_64zg26PY0
+32
+l62
+L50
+VY:haE6aL`CRiO_Ob:;J@_3
+R7
+R47
+R48
+R49
+R11
+R12
+!s100 i71B=zCcJS:Q`j<I_>jTF3
+!i10b 1
+Emux2x1
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L58
+VV`RAZFIXE_A8Kn70A]V:H2
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 cTzBFF8PG:DEYcSWGcOnG1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 6 mux2x1 0 22 V`RAZFIXE_A8Kn70A]V:H2
+32
+l83
+L64
+V]L0I_6I@c96]C1KofNCPz3
+R7
+R8
+R9
+R10
+R11
+R12
+!s100 acmaOcLY031Rl2QNO?ToF3
+!i10b 1
+Emux2x1_8bit
+Z62 w1454048116
+R2
+R3
+R4
+Z63 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/MUX_2x1_8.vhd
+Z64 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/MUX_2x1_8.vhd
+l0
+L11
+Vb5[@]E4d[]0V:lO3l9?E^1
+R7
+32
+Z65 !s108 1454193143.253000
+Z66 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/MUX_2x1_8.vhd|
+Z67 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/MUX_2x1_8.vhd|
+R11
+R12
+!s100 JF2<z^N<>3<Ydo5NnJXoS0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 11 mux2x1_8bit 0 22 b5[@]E4d[]0V:lO3l9?E^1
+32
+l30
+L21
+V64;iO=oJF@7GhT7G9@BbB1
+R7
+R65
+R66
+R67
+R11
+R12
+!s100 G3Wn8_0GURB46h<6j]V1@0
+!i10b 1
+Emyand
+Z68 w1454094151
+R2
+R3
+R4
+Z69 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand.vhd
+Z70 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand.vhd
+l0
+L10
+VX1gLGjM7KUXM[JcX=4ERQ3
+R7
+32
+Z71 !s108 1454193140.547000
+Z72 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand.vhd|
+Z73 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand.vhd|
+R11
+R12
+!s100 eI01bh`dnh=g;zIC7H;:L3
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 5 myand 0 22 X1gLGjM7KUXM[JcX=4ERQ3
+l17
+L16
+VHInV1^hm9cT0`[nDcTzMZ1
+R7
+32
+R71
+R72
+R73
+R11
+R12
+!s100 FU>JLUZmiB:T_U>1?[L0S3
+!i10b 1
+Emyand_3ip
+Z74 w1454171874
+R2
+R3
+R4
+Z75 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand_3ip.vhd
+Z76 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand_3ip.vhd
+l0
+L10
+VbA39ZOL_>o`Ua?3X;85J23
+R7
+32
+Z77 !s108 1454193145.252000
+Z78 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand_3ip.vhd|
+Z79 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myand_3ip.vhd|
+R11
+R12
+!s100 _OeUWN9c1V4DSWm]mf:NI0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 9 myand_3ip 0 22 bA39ZOL_>o`Ua?3X;85J23
+l17
+L16
+V8k3RDhi9mLYzk`j@3]0F^0
+R7
+32
+R77
+R78
+R79
+R11
+R12
+!s100 De=VRAa90aYVif1=Dc5]f0
+!i10b 1
+Emynor
+Z80 w1454159719
+R2
+R3
+R4
+Z81 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynor.vhd
+Z82 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynor.vhd
+l0
+L10
+Vh;?ed:gE_[9ThAQzBHN;]0
+R7
+32
+Z83 !s108 1454193143.698000
+Z84 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynor.vhd|
+Z85 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynor.vhd|
+R11
+R12
+!s100 MT5W6@SK_6H1zB9TVhaDi3
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 5 mynor 0 22 h;?ed:gE_[9ThAQzBHN;]0
+l17
+L16
+Vi^3@YFm[hN8LK>JlaCmWP1
+R7
+32
+R83
+R84
+R85
+R11
+R12
+!s100 eSNCjgJ_EnY`QZkEP?8PH2
+!i10b 1
+Emynot
+Z86 w1454100047
+R2
+R3
+R4
+Z87 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynot.vhd
+Z88 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynot.vhd
+l0
+L10
+VCc6FlaKUeBU>`>:f;M[DU3
+R7
+32
+Z89 !s108 1454193142.643000
+Z90 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynot.vhd|
+Z91 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/mynot.vhd|
+R11
+R12
+!s100 CnT1AZcVHdj<ebWkX6hh22
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 5 mynot 0 22 Cc6FlaKUeBU>`>:f;M[DU3
+32
+l17
+L16
+Vjji7`RgDg84bM:l5?_Y>X1
+R7
+R89
+R90
+R91
+R11
+R12
+!s100 7jHZIEBXCIaFcnO6dIhlk2
+!i10b 1
+Emyor
+Z92 w1454159734
+R2
+R3
+R4
+Z93 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor.vhd
+Z94 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor.vhd
+l0
+L10
+V`R?8Ze_3UOJl?2JnKo;c[1
+R7
+32
+Z95 !s108 1454193144.379000
+Z96 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor.vhd|
+Z97 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor.vhd|
+R11
+R12
+!s100 g8AWPB`FKOkDEjY87dLk20
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 4 myor 0 22 `R?8Ze_3UOJl?2JnKo;c[1
+l17
+L16
+VSGgMHcNVZZT;12mIY3HhI3
+R7
+32
+R95
+R96
+R97
+R11
+R12
+!s100 FfIGB0LJUi4z8g2UhN3AO2
+!i10b 1
+Emyor_3ip
+Z98 w1454172097
+R4
+Z99 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor_3ip.vhd
+Z100 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor_3ip.vhd
+l0
+L5
+VSUGHb4j7CjB8NLWSZSFM^1
+R7
+32
+Z101 !s108 1454193144.754000
+Z102 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor_3ip.vhd|
+Z103 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myor_3ip.vhd|
+R11
+R12
+!s100 eeCWi<T]c54LdVNcGM5mL2
+!i10b 1
+Aarch
+DEx4 work 8 myor_3ip 0 22 SUGHb4j7CjB8NLWSZSFM^1
+l12
+L11
+VV7DjEKC:McN2j_UgC5C4j0
+R7
+32
+R101
+R102
+R103
+R11
+R12
+!s100 3c4[_VcY7OnN^3[f1ZzSS1
+!i10b 1
+Emyxnor_8bit
+Z104 w1454180960
+R2
+R3
+R4
+Z105 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxnor.vhd
+Z106 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxnor.vhd
+l0
+L10
+V0K:<=;IgeCKBI?H<4=]8D3
+R7
+32
+Z107 !s108 1454193145.584000
+Z108 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxnor.vhd|
+Z109 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxnor.vhd|
+R11
+R12
+!s100 <B5U4B;oG_6SJ]VmI_JE:0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 11 myxnor_8bit 0 22 0K:<=;IgeCKBI?H<4=]8D3
+32
+l19
+L18
+VBjR;;4lO?P5X;YFZIM<AE0
+R7
+R107
+R108
+R109
+R11
+R12
+!s100 BbmdZ]:3JI`fTVZ@_7^6d2
+!i10b 1
+Emyxor
+Z110 w1454159705
+R2
+R3
+R4
+Z111 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxor.vhd
+Z112 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxor.vhd
+l0
+L10
+V`h^oF]O1<kGol74Rb0eVX1
+R7
+32
+Z113 !s108 1454193144.057000
+Z114 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxor.vhd|
+Z115 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/myxor.vhd|
+R11
+R12
+!s100 6EE:HAzF]]?8NTZ8gj0C>1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 5 myxor 0 22 `h^oF]O1<kGol74Rb0eVX1
+l17
+L16
+VcW8YG:?Cl5D;Vd3^:Ehb51
+R7
+32
+R113
+R114
+R115
+R11
+R12
+!s100 1>V<KlnMcbRe0aeg7mAFg3
+!i10b 1
+Enotgate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L43
+Vgz8?eOa3]zfPNA=Kikm?d3
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 FS@5aEU82ZndQ6D=U<a;G1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 7 notgate 0 22 gz8?eOa3]zfPNA=Kikm?d3
+32
+l50
+L49
+VTNkOHSML182aS9F@Cb^XN3
+R7
+R8
+R9
+R10
+R11
+R12
+!s100 Y6ia=e^Pf>XdecSD]lc0J0
+!i10b 1
+Eorgate
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L27
+Vh]I]<Z8_@gT]jBmj3R_Oi1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 aSn;L0z9zLDOHK[f90UR02
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 6 orgate 0 22 h]I]<Z8_@gT]jBmj3R_Oi1
+32
+l34
+L33
+VzahG4MG7hQ;`f[7a;zBQh0
+R7
+R8
+R9
+R10
+R11
+R12
+!s100 aGCc:BVJF2OF=:miYg61`1
+!i10b 1
+Ereg
+Z116 w1454193168
+R38
+R2
+R3
+R4
+Z117 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/reg.vhd
+Z118 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/reg.vhd
+l0
+L14
+VPaYlhj?zM<MRo6e^_T7=a0
+R7
+32
+Z119 !s108 1454193171.624000
+Z120 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/reg.vhd|
+Z121 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab1_workingfolder/BoothMul/reg.vhd|
+R11
+R12
+!s100 H:7DZdX]?H0jP><^lV10A0
+!i10b 1
+Abehave
+R38
+R2
+R3
+DEx4 work 3 reg 0 22 PaYlhj?zM<MRo6e^_T7=a0
+32
+l28
+L26
+VXgj9oheoHYMgNPgQ63jcd3
+R7
+R119
+R120
+R121
+R11
+R12
+!s100 6ZQmDL?hBB[5BHFUMMUPB3
+!i10b 1
+Etopositive
+Z122 w1454192979
+R2
+R3
+R4
+Z123 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/negativeDetect.vhd
+Z124 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/negativeDetect.vhd
+l0
+L17
+V0z2SWdE6`J`j_MLV^KQ`91
+R7
+32
+Z125 !s108 1454193140.237000
+Z126 !s90 -reportprogress|300|-work|mylib-gcd|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/negativeDetect.vhd|
+Z127 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab2_workingfolder/negativeDetect.vhd|
+R11
+R12
+!s100 gK5CGBC;[:S1=23n4Eo?N2
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 10 topositive 0 22 0z2SWdE6`J`j_MLV^KQ`91
+32
+l67
+L29
+VcOb@e0Vze5n_?HnNiAT>E1
+R7
+R125
+R126
+R127
+R11
+R12
+!s100 M1RVnje07RoC4;nf4Hlgb3
+!i10b 1
+Exorgate
+R44
+R2
+R3
+R4
+R45
+R46
+l0
+L29
+V3@S_7kznPnPmijE8:1]Le2
+R7
+32
+R47
+R48
+R49
+R11
+R12
+!s100 4QLlY_MTzc>ET5MlW4=IZ1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 7 xorgate 0 22 3@S_7kznPnPmijE8:1]Le2
+32
+l36
+L35
+VF>R^@=:1<Sa6IGaH@P1Bb2
+R7
+R47
+R48
+R49
+R11
+R12
+!s100 kg`kokCWP8m5b;SXU8CAV2
+!i10b 1

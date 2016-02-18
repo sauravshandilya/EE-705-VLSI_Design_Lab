@@ -1,0 +1,85 @@
+---
+-- Author: Saurav Shandilya
+-- Description: Comparator
+
+---
+
+---library 
+Library ieee;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+entity comparator_2bit is
+port
+(
+  comp_in1 : in bit_vector(1 downto 0) ;
+  comp_in2 : in bit_vector(1 downto 0) ;
+  
+  conn_eql,conn_grt,conn_lss : in bit;                  -- for checking previous state
+  
+  eql,grt,lss : out bit 
+);
+
+end comparator_2bit;
+
+
+architecture arch of comparator_2bit is
+  
+component myand 
+   port( in1, in2 : in bit;
+            out1 : out bit);
+end component; 
+
+component mynot					
+   port( in1 : in bit;
+        out1 : out bit);
+end component;
+
+component myxor			
+   port( in1, in2 : in bit;
+            out1 : out bit);
+end component; 
+
+component myor_3ip is					
+   port( in1, in2, in3 : in bit;
+            out1 : out bit);
+end component;
+
+component myand_3ip is					
+   port( in1, in2, in3 : in bit;
+            out1 : out bit);
+end component;
+
+---- signals
+signal sig_a1xorb1 : bit;       -- A1 xor B1
+signal sig_a1xorb1xora0xorb0 : bit;  -- A1 xor B1 xor A0 xor B0
+signal sig_F3myand1,sig_F3myand2,sig_F3myand3,sig_F3inv_b1,sig_F3inv_b0 : bit;
+signal sig_F1myand1,sig_F1myand2,sig_F1myand3,sig_F1inv_a1,sig_F1inv_a0 : bit;
+
+begin
+  xor1 : myxor port map (comp_in1(1),comp_in2(1),sig_a1xorb1);
+  xor2 : myxor port map (comp_in1(0),comp_in2(0),sig_a1xorb1xora0xorb0); 
+  
+  -- F3: greater than functiob
+  F3mynot1 : mynot port map (comp_in2(1), sig_F3inv_b1);
+  F3mynot2 : mynot port map (comp_in2(0), sig_F3inv_b0);
+    
+  F3myand1 : myand port map (comp_in1(1),sig_F3inv_b1,sig_F3myand1);
+  F3myand2 : myand_3ip port map (comp_in1(0),sig_F3inv_b0,sig_a1xorb1,sig_F3myand2);   
+  F3myand3 : myand port map (conn_grt,sig_a1xorb1xora0xorb0,sig_F3myand3);
+  F3 :  myor_3ip port map (sig_F3myand1,sig_F3myand2,sig_F3myand3, grt);
+  
+  -- F2: equal function  
+  F2myand1: myand port map ('1',sig_a1xorb1xora0xorb0,eql);
+
+  -- F1: Less than
+  F1mynot1 : mynot port map (comp_in1(1), sig_F1inv_a1);
+  F1mynot2 : mynot port map (comp_in1(0), sig_F1inv_a0);
+    
+  F1myand1 : myand port map (sig_F1inv_a1,comp_in2(1),sig_F1myand1);
+  F1myand2 : myand_3ip port map (sig_F1inv_a0,comp_in2(0),sig_a1xorb1,sig_F1myand2);   
+  F1myand3 : myand port map (conn_lss,sig_a1xorb1xora0xorb0,sig_F1myand3);
+  F1 :  myor_3ip port map (sig_F1myand1,sig_F1myand2,sig_F1myand2, lss);
+
+  
+             
+end arch;

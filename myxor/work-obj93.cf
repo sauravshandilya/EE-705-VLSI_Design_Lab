@@ -1,0 +1,8 @@
+v 4
+file . "myxor.vhd" "0d85c9b2e776edd652f6b117260a584383d454c9" "20160119224707.492":
+  entity myxor at 6( 119) + 0 on 29;
+  architecture arch of myxor at 16( 336) + 0 on 30;
+file . "myxor_tb.vhd" "828716a434d736a53414037dac0d92903a8853e7" "20160119224835.070":
+  entity myxor_tb at 6( 122) + 0 on 34;
+  architecture arch of myxor_tb at 14( 281) + 0 on 35;
+  configuration cfg_tb at 83( 2228) + 0 on 36;

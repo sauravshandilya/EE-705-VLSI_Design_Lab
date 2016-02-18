@@ -1,0 +1,236 @@
+-------------------------
+-- Author: Saurav Shandilya 
+-- Roll No: 153076004, Electronics System, EE, IIT Bombay
+-- EE-705 VLSI Design Lab (Course Instructor: Prof. Virendra Singh)
+-- Description: Booth Multiplier datapath implementation
+-------------------------
+
+
+-- ****** Datapath *******
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
+
+entity bmdatapath is
+port 
+( 
+	sysclk: In bit;		-- input to data block
+  reset: In bit;
+  
+    -- data signals to/from environment
+    data_in1        : in  bit_vector(7 downto 0);  -- in data for Multiplier
+    data_in2        : in  bit_vector(7 downto 0);  -- in data for Multiplicand 
+    data_out       : out bit_vector(15 downto 0);  -- out data
+    
+	---- Signal to controller	
+	countstatus: out std_logic_vector(3 downto 0);     -- checks status of counter. leave in std_logic
+			
+	---- Signal from controller
+  enable_multiplier_reg: in bit;
+	reset_multiplier_reg: in bit;
+
+	enable_multiplicand_reg: in bit;
+	reset_multiplicand_reg: in bit;
+
+	enable_out_reg: in bit;
+	reset_out_reg: in bit;
+	
+	enable_buffadder_reg:in bit;
+	reset_buffadder_reg: in bit;
+	
+	enable_shiftreg: in bit;
+	reset_shiftreg: in bit;
+	
+	enable_buffshifter_reg: in bit;
+	reset_buffshifter_reg: in bit;
+	
+	loadmuxsel: in bit;
+	
+	counter_reset: in bit;
+	counter_enable: in bit
+);
+end bmdatapath;
+
+architecture arch of bmdatapath is
+
+-- add all component
+ component reg
+  generic ( nbits : integer);                    -- no. of bits
+
+  port (
+    data_in : in bit_vector(nbits-1 downto 0);
+    data_out : out bit_vector(nbits-1 downto 0);
+    clk : in bit;
+    enable : in  bit;
+    reset : in  bit
+    );
+  end component;
+  
+component fulladdsub is		--- import adder
+	PORT (A,B:IN bit_vector(7 DOWNTO 0); addsub:IN bit; sum:OUT bit_vector(7 DOWNTO 0);Cout:OUT bit);
+end component;
+
+component shiftregister is
+   PORT (data_in:IN BIT_VECTOR(16 DOWNTO 0); clk_shiftreg,reset_shiftreg:IN BIT; data_out:OUT BIT_VECTOR(16 DOWNTO 0));
+end component;
+
+component counter_8bit is
+	port(clk : in bit;reset : in bit;enable: in bit; countout : out std_logic_vector(3 downto 0));
+end component;
+
+component Mux2x1_8bit is
+	PORT ( Mux_in_1:IN bit_vector(7 DOWNTO 0);
+			Mux_in_2:IN bit_vector(7 DOWNTO 0);
+			sel:IN bit; 
+			mux_out:OUT bit_vector(7 DOWNTO 0)
+			);
+end component;
+
+component mux2to1 is
+    port (A,B,sel: in bit;muxout: out bit);
+end component;
+
+component Mux2x1_17bit
+	PORT ( Mux_in_1:IN bit_vector(16 DOWNTO 0);
+			Mux_in_2:IN bit_vector(16 DOWNTO 0);
+			sel:IN bit; 
+			mux_out:OUT bit_vector(16 DOWNTO 0)
+			);
+end component;
+	
+component operation is
+	PORT ( 
+	input_0:in bit;
+	input_1:in bit;
+	output_addsub:out bit;
+	output_addnonzero:out bit);
+end component;
+	
+	------------
+	-- Signals
+	
+  signal sig_multiplier_out,sig_multiplicand_out, sig_shiftreg_out : bit_vector(16 downto 0);
+  signal sig_adderout : bit_vector(7 downto 0);
+  signal sig_mux_out : bit_vector(7 downto 0);  
+  signal sig_shiftin : bit_vector(16 downto 0);
+  signal sig_shiftregister_out:bit_vector(16 downto 0);
+  signal sig_multipliermux_out: bit_vector(16 downto 0);
+  signal sig_buffaddertoadder : bit_vector(7 downto 0);
+  signal sig_buffaddertobuffshifter : bit_vector(8 downto 0);
+  --signal countstatus : std_logic_vector(2 downto 0);
+  signal sig_buffshifterout:bit_vector(16 downto 0);
+  signal addnonzero,addsub: bit;
+  signal countref: std_logic_vector(3 downto 0):="1111"; 
+ 
+ --------------------
+ -- 
+begin
+multiplier_reg: reg
+    generic map ( nbits => 17 )
+    port map (
+      data_in(16 downto 9) => "00000000",     -- 8 MSB bits are zero
+      data_in(8 downto 1)  => data_in1,       -- multiplier 
+      data_in(0) => '0',                      -- booth bit
+      data_out => sig_multiplier_out,             
+      clk      => sysclk,
+      reset    => reset_multiplier_reg,
+      enable   => enable_multiplier_reg);
+
+shiftreg_reg: reg
+    generic map ( nbits => 17 )
+    port map (
+      data_in => sig_shiftregister_out,     -- 8 MSB bits are zero
+      data_out => sig_shiftreg_out,             
+      clk      => sysclk,
+      reset    => reset_shiftreg,
+      enable   => enable_shiftreg);
+  
+multiplicand_reg: reg
+    generic map ( nbits => 17 )
+    port map (
+      data_in(16 downto 9) => data_in2,     -- 8 MSB bits are multiplicand
+      data_in(8 downto 0)  => "000000000",  -- multiplier 
+      data_out => sig_multiplicand_out,
+      clk    => sysclk,
+      reset  => reset_multiplicand_reg,
+      enable => enable_multiplicand_reg);
+
+multiplier_mux: Mux2x1_17bit           -- Select between input multiplier register and shift register		
+	PORT map( 
+    	 Mux_in_1 => sig_multiplier_out(16 downto 0),
+			Mux_in_2 => sig_shiftreg_out(16 downto 0),
+			sel => loadmuxsel, 
+			mux_out => sig_multipliermux_out
+			);		
+
+buffadder_reg: reg
+    generic map ( nbits => 17 )
+    port map (
+      data_in => sig_multipliermux_out,
+      data_out(16 downto 9) => sig_buffaddertoadder,
+      data_out(8 downto 0) => sig_buffaddertobuffshifter,
+      clk    => sysclk,
+      reset  => reset_buffadder_reg,
+      enable => enable_buffadder_reg); 
+
+control: operation 
+  port map ( 
+	 input_0 => sig_buffaddertobuffshifter(0),   --Q0 LSB
+	 input_1 => sig_buffaddertobuffshifter(1), 	 -- Q1
+	 output_addsub => addsub,
+	 output_addnonzero => addnonzero
+	 );
+
+
+multiplicand_mux: Mux2x1_8bit
+port map ( 
+    Mux_in_1 => "00000000",
+    Mux_in_2 => sig_multiplicand_out(16 downto 9),
+    sel => addnonzero,
+		mux_out => sig_mux_out
+		);
+		      
+adder8bit: fulladdsub
+	port map(
+	A => sig_buffaddertoadder,  
+	B => sig_mux_out,
+  addsub => addsub, 
+  sum => sig_adderout, 
+  Cout => open );
+
+
+buffshifter_reg: reg
+    generic map ( nbits => 17 )
+    port map (
+      data_in(16 downto 9) => sig_adderout,
+      data_in(8 downto 0) => sig_buffaddertobuffshifter,
+      data_out => sig_buffshifterout,
+      clk    => sysclk,
+      reset  => reset_buffshifter_reg,
+      enable => enable_buffshifter_reg);  
+      
+ASR: shiftregister
+   port map (
+   data_in => sig_buffshifterout,
+   clk_shiftreg => sysclk,
+   reset_shiftreg =>	reset_shiftreg,
+   data_out => sig_shiftregister_out(16 downto 0)
+   );
+
+counter: counter_8bit
+	port map(
+	     clk => sysclk,
+	     reset => counter_reset,
+	     enable => counter_enable,
+	     countout => countstatus);   
+	     
+out_reg: reg
+    generic map ( nbits => 16 )
+    port map (
+      data_in  => sig_shiftregister_out(16 downto 1),    -- copy 16 MS bits
+      data_out => data_out,
+      clk    => sysclk,
+      reset  => reset_out_reg,
+      enable => enable_out_reg);
+end arch;
+

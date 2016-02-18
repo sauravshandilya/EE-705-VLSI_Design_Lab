@@ -1,0 +1,145 @@
+-- To include Library
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+-- Entity Declarations
+ENTITY shiftregister_tb is
+END shiftregister_tb;  
+
+-- Architecture Declarations
+
+ARCHITECTURE arch of shiftregister_tb is
+
+    COMPONENT shiftregister is	-- import shiftregister
+       PORT (data_in:IN BIT_VECTOR(16 DOWNTO 0); clk_shiftreg,reset_shiftreg:IN BIT; data_out:OUT BIT_VECTOR(16 DOWNTO 0));
+    END COMPONENT;
+
+
+signal data_in:BIT_VECTOR(16 DOWNTO 0):=(OTHERS=>'0'); 
+signal clk_shiftreg,reset_shiftreg:BIT;
+signal data_out:BIT_VECTOR(16 DOWNTO 0);
+
+BEGIN
+   mapping: shiftregister PORT MAP (	data_in,
+					clk_shiftreg,
+					reset_shiftreg,
+					data_out);
+ 
+PROCESS
+			
+			BEGIN
+			
+			S_SHIFT_REG (16) <= '1';
+			S_SHIFT_REG (15) <= '0';
+			S_SHIFT_REG (14) <= '1';
+			S_SHIFT_REG (13) <= '0';
+			S_SHIFT_REG (12) <= '1';
+			S_SHIFT_REG (11) <= '0';
+			S_SHIFT_REG (10) <= '1';
+			S_SHIFT_REG (9) <= '0';	
+			S_SHIFT_REG (8) <= '1';
+			S_SHIFT_REG (7) <= '0';			
+			S_SHIFT_REG (6) <= '1';
+			S_SHIFT_REG (5) <= '0';
+			S_SHIFT_REG (4) <= '1';
+			S_SHIFT_REG (3) <= '0';
+			S_SHIFT_REG (2) <= '1';
+			S_SHIFT_REG (1) <= '1';	
+			S_SHIFT_REG (0) <= '0';
+			
+			CLK_SHIFT_REG <= '0';
+			RESET_SHIFT_REG<= '0';
+			
+			wait for 20 ns;	
+
+			CLK_SHIFT_REG <= '1';
+			RESET_SHIFT_REG<= '0';
+			wait for 10 ns;
+
+			S_SHIFT_REG (16) <= '0';
+			S_SHIFT_REG (15) <= '1';
+			S_SHIFT_REG (14) <= '0';
+			S_SHIFT_REG (13) <= '1';
+			S_SHIFT_REG (12) <= '0';
+			S_SHIFT_REG (11) <= '1';
+			S_SHIFT_REG (10) <= '0';
+			S_SHIFT_REG (9) <= '1';	
+			S_SHIFT_REG (8) <= '0';
+			S_SHIFT_REG (7) <= '1';			
+			S_SHIFT_REG (6) <= '0';
+			S_SHIFT_REG (5) <= '1';
+			S_SHIFT_REG (4) <= '0';
+			S_SHIFT_REG (3) <= '1';
+			S_SHIFT_REG (2) <= '0';
+			S_SHIFT_REG (1) <= '1';	
+			S_SHIFT_REG (0) <= '0';
+			
+			CLK_SHIFT_REG <= '1';
+			RESET_SHIFT_REG<= '0';
+			wait for 20 ns;	
+
+			CLK_SHIFT_REG <= '0';
+			RESET_SHIFT_REG<= '0';
+			wait for 10 ns;
+
+
+			S_SHIFT_REG (16) <= '1';
+			S_SHIFT_REG (15) <= '1';
+			S_SHIFT_REG (14) <= '0';
+			S_SHIFT_REG (13) <= '0';
+			S_SHIFT_REG (12) <= '0';
+			S_SHIFT_REG (11) <= '0';
+			S_SHIFT_REG (10) <= '1';
+			S_SHIFT_REG (9) <= '1';	
+			S_SHIFT_REG (8) <= '1';
+			S_SHIFT_REG (7) <= '0';			
+			S_SHIFT_REG (6) <= '1';
+			S_SHIFT_REG (5) <= '1';
+			S_SHIFT_REG (4) <= '1';
+			S_SHIFT_REG (3) <= '0';
+			S_SHIFT_REG (2) <= '1';
+			S_SHIFT_REG (1) <= '1';	
+			S_SHIFT_REG (0) <= '0';
+			
+			CLK_SHIFT_REG <= '0';
+			RESET_SHIFT_REG<= '0';
+			wait for 20 ns;	
+
+			CLK_SHIFT_REG <= '1';
+			RESET_SHIFT_REG<= '0';
+			wait for 10 ns;
+
+			S_SHIFT_REG (16) <= '0';
+			S_SHIFT_REG (15) <= '1';
+			S_SHIFT_REG (14) <= '0';
+			S_SHIFT_REG (13) <= '1';
+			S_SHIFT_REG (12) <= '0';
+			S_SHIFT_REG (11) <= '1';
+			S_SHIFT_REG (10) <= '0';
+			S_SHIFT_REG (9) <= '1';	
+			S_SHIFT_REG (8) <= '0';
+			S_SHIFT_REG (7) <= '1';			
+			S_SHIFT_REG (6) <= '0';
+			S_SHIFT_REG (5) <= '1';
+			S_SHIFT_REG (4) <= '0';
+			S_SHIFT_REG (3) <= '1';
+			S_SHIFT_REG (2) <= '0';
+			S_SHIFT_REG (1) <= '1';	
+			S_SHIFT_REG (0) <= '0';
+			
+			CLK_SHIFT_REG <= '1';
+			RESET_SHIFT_REG<= '1';
+			wait for 20 ns;
+
+			CLK_SHIFT_REG <= '0';
+			RESET_SHIFT_REG<= '1';
+			wait for 10 ns;
+	WAIT;
+
+END PROCESS;
+END arch;
+
+configuration cfg_tb of shiftregister_tb is
+   for arch
+   end for;
+end cfg_tb;

@@ -1,0 +1,8 @@
+v 4
+file . "counter_8bit_tb.vhd" "cf73396f260b624e139306061689d06eec0db961" "20160123101921.761":
+  entity counter8bit_tb at 7( 163) + 0 on 53;
+  architecture arch of counter8bit_tb at 13( 253) + 0 on 54;
+  configuration cfg_tb at 84( 1381) + 0 on 55;
+file . "counter_8bit.vhd" "7cb5e5630079973c4907ea6b815e2942f7e1959a" "20160123101812.081":
+  entity counter_8bit at 6( 145) + 0 on 48;
+  architecture arch of counter_8bit at 19( 400) + 0 on 49;

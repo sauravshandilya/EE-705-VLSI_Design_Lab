@@ -1,0 +1,171 @@
+m255
+K3
+13
+cModel Technology
+d/opt/altera/13.1/modelsim_ase/bin
+Ecounter_ncycle
+Z0 w1455396461
+Z1 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 d/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder
+Z5 8/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd
+Z6 F/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd
+l0
+L11
+VLfe43TYj3;cofMP<flikY2
+!s100 0OB2:l5H7CF3[j@^Oi5m_2
+Z7 OV;C;10.1d;51
+32
+!i10b 1
+Z8 !s108 1455732016.795873
+Z9 !s90 -reportprogress|30|-work|elevatorVHDL|/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd|
+Z10 !s107 /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd|
+Z11 o-work elevatorVHDL -O0
+Z12 tExplicit 1 NoCoverage 1
+Abehav
+R1
+R2
+R3
+Z13 DEx4 work 14 counter_ncycle 0 22 Lfe43TYj3;cofMP<flikY2
+l28
+L22
+Z14 VW_bSe7dlH<4?P7?2ZV^H53
+Z15 !s100 <eOUU[b<4gV6njlNPY[Mf0
+R7
+32
+!i10b 1
+R8
+R9
+R10
+R11
+R12
+Eelevator
+Z16 w1455577176
+R3
+R2
+R1
+R4
+Z17 8/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+Z18 F/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+l0
+L17
+VKSP:eKWK9ZJ?Ponccm=nT0
+R7
+32
+Z19 !s108 1455577179.875194
+Z20 !s90 -reportprogress|300|-work|elevatorVHDL|/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd|
+Z21 !s107 /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd|
+R11
+R12
+!s100 fcJS4elb[2l4G@RKCz0:i0
+!i10b 1
+Abehav
+R3
+R2
+R1
+DEx4 work 8 elevator 0 22 KSP:eKWK9ZJ?Ponccm=nT0
+l69
+L36
+VE7O7QBcW`a`=BMY70^Tg]1
+R7
+32
+R19
+R20
+R21
+R11
+R12
+!s100 _SN>=E[b:k@JB7@E[Ye3;3
+!i10b 1
+Eelevator6floor
+Z22 w1455728750
+R3
+R2
+R1
+R4
+R17
+R18
+l0
+L17
+V^0^znQ?U04CzmbdXfY@D`1
+R7
+32
+Z23 !s108 1455732016.625406
+R20
+R21
+R11
+R12
+!s100 h<]EAkaK_1P:9nSFbIBAO2
+!i10b 1
+Abehav
+R3
+R2
+R1
+DEx4 work 14 elevator6floor 0 22 ^0^znQ?U04CzmbdXfY@D`1
+l69
+L36
+VJHGQFl^iB2Q3]f2;5B]o72
+R7
+32
+R23
+R20
+R21
+R11
+R12
+!s100 VFW`g4?NcZJo9[KCi0EUj0
+!i10b 1
+Eelevator6floor_tb
+Z24 w1455731995
+R3
+R2
+R1
+R4
+Z25 8/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator_tb.vhd
+Z26 F/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator_tb.vhd
+l0
+L14
+VlWKbn22JLheZg0]Zc11?;0
+R7
+32
+Z27 !s108 1455732016.720519
+Z28 !s90 -reportprogress|30|-work|elevatorVHDL|/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator_tb.vhd|
+Z29 !s107 /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator_tb.vhd|
+R11
+R12
+!s100 E<S5>VkK96_iooEXMbOGE3
+!i10b 1
+Abehav
+R3
+R2
+R1
+Z30 DEx4 work 17 elevator6floor_tb 0 22 lWKbn22JLheZg0]Zc11?;0
+l58
+L19
+V7ORB3g2z^03^k7[G9lVWR1
+!s100 VJ648D4]7;aII[l]ioX9m0
+R7
+32
+R27
+R28
+R29
+R11
+R12
+!i10b 1
+Aarch
+R3
+R2
+R1
+R30
+l58
+L19
+Vh665fImT:_3^Q7N98QKOk3
+R7
+32
+R11
+R12
+w1455629613
+R29
+!s90 -reportprogress|300|-work|elevatorVHDL|/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator_tb.vhd|
+!s100 Gcl?G^nFFdFD<GdXCQ9930
+!s108 1455629630.012558
+!i10b 1

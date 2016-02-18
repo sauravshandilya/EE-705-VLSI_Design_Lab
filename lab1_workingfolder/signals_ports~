@@ -1,0 +1,29 @@
+ENTITY fulladdsub is
+	PORT (
+		A,B:IN std_logic_vector(7 DOWNTO 0); 
+		addsub:IN std_logic; 
+		sum:OUT std_logic_vector(7 DOWNTO 0);
+		Cout:OUT std_logic
+			);
+END fulladdsub;
+
+
+ENTITY Mux_8x1 is
+	PORT ( Mux_in_1:IN std_logic_vector(7 DOWNTO 0);
+			Mux_in_2:IN std_logic_vector(7 DOWNTO 0);
+			sel:IN std_logic; 
+			mux_out:OUT std_logic_vector(7 DOWNTO 0)
+			);
+			
+END Mux_8x1;
+
+entity mux_2to1 is
+    port (A,B,sel: in std_logic;
+	    muxout: out std_logic	
+	);
+end mux_2to1;
+
+ENTITY shiftregister is
+   PORT (data_in:IN BIT_VECTOR(16 DOWNTO 0); clk_shiftreg,reset_shiftreg:IN BIT; data_out:OUT BIT_VECTOR(16 DOWNTO 0));
+END shiftregister;
+

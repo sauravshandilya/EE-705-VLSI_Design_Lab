@@ -1,0 +1,222 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech64_10.1c\examples
+Econtrolpath
+Z0 w1453551403
+Z1 dE:\M.Tech._IITB\sem-2\EE705-VLSIDesignLab\My_codes\tut-1
+Z2 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/control_path.vhdl
+Z3 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/control_path.vhdl
+l0
+L2
+VTYUN9iePilYX@jBgD9dZl0
+Z4 OL;C;10.1c;51
+32
+Z5 !s108 1453748010.304000
+Z6 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/control_path.vhdl|
+Z7 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/control_path.vhdl|
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1
+!s100 EhY]^JF;Yz>SQSGE@gL3X3
+!i10b 1
+Abehave
+DEx4 work 11 controlpath 0 22 TYUN9iePilYX@jBgD9dZl0
+l35
+L31
+VDGVBgK<:kD^mjJQaHgV:D0
+R4
+32
+R5
+R6
+R7
+R8
+R9
+!s100 RTZ3QD9Id1YU=56X?Q[5j3
+!i10b 1
+Edatapath
+Z10 w1453473514
+R1
+Z11 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/data_path.vhdl
+Z12 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/data_path.vhdl
+l0
+L3
+VMcKKTcAUV[6:`0UC[b4Yj0
+R4
+32
+Z13 !s108 1453748010.607000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/data_path.vhdl|
+Z15 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/data_path.vhdl|
+R8
+R9
+!s100 dWn<FYom:8IMzz447Y[iC2
+!i10b 1
+Astruct
+DEx4 work 8 datapath 0 22 McKKTcAUV[6:`0UC[b4Yj0
+l88
+L32
+V:O@Ia29Bm^Cz9hhd@G^]D1
+R4
+32
+R13
+R14
+R15
+R8
+R9
+!s100 RF==0hIVR;<OF_]JjCcmQ2
+!i10b 1
+Emux2to1
+Z16 w1453471278
+R1
+Z17 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/mux2to1.vhdl
+Z18 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/mux2to1.vhdl
+l0
+L2
+V?d7GWN3Mebkd?GGY[EbmL0
+R4
+32
+Z19 !s108 1453748010.988000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/mux2to1.vhdl|
+Z21 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/mux2to1.vhdl|
+R8
+R9
+!s100 ?F?[7KAC=gC3]EOdXIcWg1
+!i10b 1
+Abmux2to1
+DEx4 work 7 mux2to1 0 22 ?d7GWN3Mebkd?GGY[EbmL0
+l17
+L15
+VF7jE@n][G[PB;79ob59BV0
+R4
+32
+R19
+R20
+R21
+R8
+R9
+!s100 _dPEk_2cLVHZ[V81dPGk[3
+!i10b 1
+Ereg
+Z22 w1453747666
+R1
+Z23 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/reg.vhdl
+Z24 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/reg.vhdl
+l0
+L2
+VVej<kbCJaW[2jPL<9>2k^3
+R4
+32
+Z25 !s108 1453748011.289000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/reg.vhdl|
+Z27 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/reg.vhdl|
+R8
+R9
+!s100 Pjn7RgGmAY;E6zKLSkRGD0
+!i10b 1
+Abehave
+DEx4 work 3 reg 0 22 Vej<kbCJaW[2jPL<9>2k^3
+32
+l16
+L14
+VY>ik0jj6iHeH`l_;59mjP3
+R4
+R25
+R26
+R27
+R8
+R9
+!s100 0I6l6I;B7W:a9OS?@iZOb3
+!i10b 1
+Etop
+Z28 w1453473130
+R1
+Z29 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/top.vhdl
+Z30 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/top.vhdl
+l0
+L3
+VkFGil?>;J2KL4OC3jT>EE3
+R4
+32
+Z31 !s108 1453748011.596000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/top.vhdl|
+Z33 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/top.vhdl|
+R8
+R9
+!s100 lbg1:ec7H0E56ATZV[V1i1
+!i10b 1
+Astruct
+DEx4 work 3 top 0 22 kFGil?>;J2KL4OC3jT>EE3
+l77
+L15
+Vj[f:meRKF3]GSPH<5z1H_1
+R4
+32
+R31
+R32
+R33
+R8
+R9
+!s100 Ke6HhM=AJJhNU[4n:V18H1
+!i10b 1
+Eunsigned_adder
+Z34 w1453471006
+R1
+Z35 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_adder.vhdl
+Z36 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_adder.vhdl
+l0
+L2
+VhF^bY?Od9gCM2_NzkJnZm3
+R4
+32
+Z37 !s108 1453748011.859000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_adder.vhdl|
+Z39 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_adder.vhdl|
+R8
+R9
+!s100 nAoa:AhLi]a2f0g108g561
+!i10b 1
+Abehave
+DEx4 work 14 unsigned_adder 0 22 hF^bY?Od9gCM2_NzkJnZm3
+l15
+L13
+VY41EiDMhW?@6LP=N[6lEE0
+R4
+32
+R37
+R38
+R39
+R8
+R9
+!s100 2H5cOl=4nZY1VU0?0H=f[2
+!i10b 1
+Eunsigned_comparator
+Z40 w1453471062
+R1
+Z41 8E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_comparator.vhdl
+Z42 FE:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_comparator.vhdl
+l0
+L2
+VIKMbCfn>F8B1l^De096zO2
+R4
+32
+Z43 !s108 1453748012.148000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_comparator.vhdl|
+Z45 !s107 E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_comparator.vhdl|
+R8
+R9
+!s100 DcZ_BhcQ6EIgcOA=3=GgT3
+!i10b 1
+Abehave
+DEx4 work 19 unsigned_comparator 0 22 IKMbCfn>F8B1l^De096zO2
+l17
+L16
+VQmZPl7TBgX3C[mCgibGDl2
+R4
+32
+R43
+R44
+R45
+R8
+R9
+!s100 F=4:CUF4zQ26n>zjDo2NF0
+!i10b 1

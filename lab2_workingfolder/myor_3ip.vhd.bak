@@ -1,0 +1,16 @@
+-- Author: Saurav Shandilya
+-- Description: myor for 3 input
+
+--ENTITY DECLARATION: name, inputs, outputs
+entity myor_3ip is					
+   port( in1, in2 in3 : in bit;
+            out1 : out bit);
+end myor_3ip;
+
+--Architecture of AND gate
+architecture arch of myor_3ip is 
+begin
+  out1 <= in1 or in2 or in3;		
+end arch;
+
+

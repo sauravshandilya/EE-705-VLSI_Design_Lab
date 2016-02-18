@@ -1,0 +1,21 @@
+library ieee; -- including package
+use ieee.std_logic_1164.all; -- for using to_bit() function
+use ieee.numeric_std.all; --for using to_unsigned ( ) function
+
+entity myor is
+port
+(
+	A: in std_logic;
+	B: in std_logic;
+	c: out std_logic
+);
+end myOR;
+
+architecture myOR_arch of myOR is
+begin
+	C <= A or B;
+end myOR_arch;
+
+
+
+

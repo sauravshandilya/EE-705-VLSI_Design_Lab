@@ -1,0 +1,43 @@
+E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/reg.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/reg.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity reg
+-- Compiling architecture behave of reg
+
+} {} {}} E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/data_path.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/data_path.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity Datapath
+-- Compiling architecture struct of Datapath
+
+} {} {}} E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/top.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/top.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity top
+-- Compiling architecture struct of top
+
+} {} {}} E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_comparator.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_comparator.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity unsigned_comparator
+-- Compiling architecture behave of unsigned_comparator
+
+} {} {}} E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_adder.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/unsigned_adder.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity unsigned_adder
+-- Compiling architecture behave of unsigned_adder
+
+} {} {}} E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/mux2to1.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/mux2to1.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity mux2to1
+-- Compiling architecture bmux2to1 of mux2to1
+
+} {} {}} E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/control_path.vhdl {1 {vcom -work work -2002 -explicit -vopt E:/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/Assignments/Lab-1/EE705_Tut1/control_path.vhdl
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Compiling entity Controlpath
+-- Compiling architecture behave of Controlpath
+
+} {} {}}

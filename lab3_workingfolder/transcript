@@ -1,0 +1,3694 @@
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+# ** Fatal: (vsim-3350) Generic "floorcount" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /elevator File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd Line: 11
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+quit -sim
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+add wave -position end  sim:/elevator/nextstate
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+add wave -position end  sim:/elevator/sig_carcall
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+noforce sim:/elevator/carcall
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+force -freeze sim:/elevator/carcall 000101 0
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/start
+add wave -position end  sim:/elevator/emergencystop
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/carcall 000001 0
+run
+add wave -position end  sim:/elevator/nextstate
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+quit -sim
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/sig_carcall
+add wave -position end  sim:/elevator/sig_carcall_status
+add wave -position end  sim:/elevator/sig_hallcall_up
+add wave -position end  sim:/elevator/sig_hallcall_down
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/state_signal
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/curstate
+add wave -position end  sim:/elevator/curstate
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/hallcall_up 00001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/floorsensor
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/nextstate
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+quit -sim
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+quit -sim
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/curstate
+add wave -position end  sim:/elevator/sig_carcall_status
+add wave -position end  sim:/elevator/sig_hallcall_up_status
+add wave -position end  sim:/elevator/sig_request
+add wave -position 10  sim:/elevator/sig_hallcall_down_status
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 300 ps  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 151
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 300 ps  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 151
+force -freeze sim:/elevator/reset 1 0
+force -freeze sim:/elevator/carcall 000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/carcall 000010 0
+force -freeze sim:/elevator/hallcall_up 00001 0
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 1100 ps  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 151
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 1100 ps  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 151
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 1200 ps  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 151
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/curstate
+add wave -position end  sim:/elevator/sig_carcall_status
+add wave -position end  sim:/elevator/sig_hallcall_up_status
+add wave -position end  sim:/elevator/sig_hallcall_down_status
+add wave -position end  sim:/elevator/sig_request
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+# Can't move the Now cursor.
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 1 ns  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 151
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading elevatorVHDL.elevator(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/curstate
+add wave -position end  sim:/elevator/sig_carcall_status
+add wave -position end  sim:/elevator/sig_hallcall_up_status
+add wave -position end  sim:/elevator/sig_hallcall_down_status
+add wave -position end  sim:/elevator/sig_request
+force -freeze sim:/elevator/reset 1 0
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+noforce sim:/elevator/reset
+force -freeze sim:/elevator/carcall 000001 0
+run
+# ** Failure: (vsim-3424) STD_LOGIC_1164."or":Arguments of overloaded "or" operator are not the same length
+#    Time: 100 ps  Iteration: 1  Process: /elevator/buttonstate File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd
+# Break in Process buttonstate at /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/01_elevator.vhd line 155
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd was successful.
+vsim elevatorVHDL.counter_ncycle
+# vsim elevatorVHDL.counter_ncycle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/counter_ncycle/cyclecount
+add wave -position end  sim:/counter_ncycle/clk
+add wave -position end  sim:/counter_ncycle/reset
+add wave -position end  sim:/counter_ncycle/countout
+add wave -position end  sim:/counter_ncycle/count
+force -freeze sim:/counter_ncycle/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run -continue
+run -continue
+run -continue
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd was successful.
+vsim elevatorVHDL.counter_ncycle
+# vsim elevatorVHDL.counter_ncycle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.counter_ncycle(behav)
+# ** Fatal: (vsim-3347) Port "maxcount" is an unconstrained array.
+#    Time: 0 ps  Iteration: 0  Instance: /counter_ncycle File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd Line: 14
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd was successful.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd was successful.
+vsim elevatorVHDL.counter_ncycle
+# vsim elevatorVHDL.counter_ncycle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.counter_ncycle(behav)
+# ** Fatal: (vsim-3347) Port "maxcount" is an unconstrained array.
+#    Time: 0 ps  Iteration: 0  Instance: /counter_ncycle File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd Line: 14
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd was successful.
+# Compile of counter_ncycle.vhd was successful.
+vsim elevatorVHDL.counter_ncycle
+# vsim elevatorVHDL.counter_ncycle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.counter_ncycle(behav)
+# ** Fatal: (vsim-3350) Generic "maxcount" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /counter_ncycle File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd Line: 12
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd failed with 2 errors.
+# Compile of counter_ncycle.vhd failed with 2 errors.
+# Compile of counter_ncycle.vhd was successful.
+# Compile of counter_ncycle.vhd was successful.
+vsim elevatorVHDL.counter_ncycle
+# vsim elevatorVHDL.counter_ncycle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/counter_ncycle/maxcount
+add wave -position end  sim:/counter_ncycle/clk
+add wave -position end  sim:/counter_ncycle/reset
+add wave -position end  sim:/counter_ncycle/countout
+add wave -position end  sim:/counter_ncycle/count
+add wave -position end  sim:/counter_ncycle/sig_maxcount
+run
+run
+run
+run
+run
+force -freeze sim:/counter_ncycle/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/counter_ncycle/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/counter_ncycle/reset
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of counter_ncycle.vhd was successful.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd failed with 2 errors.
+# Compile of 01_elevator.vhd was successful with warnings.
+# Compile of 01_elevator.vhd was successful.
+quit -sim
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/count1/countout
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of counter_ncycle.vhd was successful.
+vsim elevatorVHDL.counter_ncycle
+# vsim elevatorVHDL.counter_ncycle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.counter_ncycle(behav)
+# ** Fatal: (vsim-3350) Generic "cyclecount" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /counter_ncycle File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab3_workingfolder/counter_ncycle.vhd Line: 12
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter1_en
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/sig_counter1_en 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/sig_counter1_en 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dir_up
+add wave -position end  sim:/elevator/dir_down
+add wave -position end  sim:/elevator/liftmoving
+add wave -position end  sim:/elevator/nextstate
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+force -freeze sim:/elevator/carcall 000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/sig_carcall
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+add wave -position end  sim:/elevator/sig_counter1_out
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+add wave -position end  sim:/elevator/sig_counter1_en
+force -freeze sim:/elevator/sig_counter1_en 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dooropen
+add wave -position end  sim:/elevator/liftmoving
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter2_out
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/elevator/reset
+force -freeze sim:/elevator/carcall 000001 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dooropen
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_request
+add wave -position end  sim:/elevator/sig_request_remain
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dooropen
+add wave -position end  sim:/elevator/dir_up
+add wave -position end  sim:/elevator/dir_down
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_request
+add wave -position end  sim:/elevator/sig_request_remain
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+add wave -position 2  sim:/elevator/carcall
+force -freeze sim:/elevator/carcall 000001 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/elevator/hallcall_up
+force -freeze sim:/elevator/hallcall_up 00001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter2_out
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/floorsensor 000001 0
+force -freeze sim:/elevator/hallcall_up 00000 0
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 110000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/hallcall_up
+add wave -position end  sim:/elevator/hallcall_down
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dooropen
+add wave -position end  sim:/elevator/dir_up
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_request
+add wave -position end  sim:/elevator/sig_request_remain
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter2_out
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000000 0
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 010100 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dooropen
+add wave -position end  sim:/elevator/dir_up
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_request
+add wave -position end  sim:/elevator/sig_request_remain
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter2_out
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+force -freeze sim:/elevator/carcall 000100 0
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 010100 0
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 010000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd failed with 1 errors.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/floorsensor
+add wave -position end  sim:/elevator/dooropen
+add wave -position end  sim:/elevator/dir_up
+add wave -position end  sim:/elevator/dir_down
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_request
+add wave -position end  sim:/elevator/sig_request_remain
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter2_out
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/floorsensor 000001 0
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 001000 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 001000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000010 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/elevator/sig_stop
+force -freeze sim:/elevator/sig_stop 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/elevator/sig_stop
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Can't move the Now cursor.
+force -freeze sim:/elevator/carcall 010010 0
+add wave -position end  sim:/elevator/sig_carcall
+run
+force -freeze sim:/elevator/carcall 011010 {} -cancel {10 ns}
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 011010 0 -cancel 10
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel {10 ps}
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 20ns
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/elevator/carcall
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+force -freeze sim:/elevator/carcall 000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+quit -sim
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+add wave -position end  sim:/elevator/reset
+add wave -position end  sim:/elevator/clk
+add wave -position end  sim:/elevator/carcall
+add wave -position end  sim:/elevator/dir_up
+add wave -position end  sim:/elevator/dir_down
+add wave -position end  sim:/elevator/liftmoving
+add wave -position end  sim:/elevator/nextstate
+add wave -position end  sim:/elevator/sig_carcall
+add wave -position end  sim:/elevator/sig_carcall_status
+add wave -position end  sim:/elevator/sig_request
+add wave -position end  sim:/elevator/sig_request_remain
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+add wave -position 3  sim:/elevator/floorsensor
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+add wave -position end  sim:/elevator/sig_counter1_out
+add wave -position end  sim:/elevator/sig_counter2_out
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0 -cancel 11ns
+run
+force -freeze sim:/elevator/carcall 000100 0 -cancel 11ns
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000101 0
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000100 0 -cancel 11ns
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -continue
+run -continue
+run -continue
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+add wave -position end  sim:/elevator/sig_stop
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+noforce sim:/elevator/reset
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/carcall 000001 0
+run
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 010100 0
+run
+run
+force -freeze sim:/elevator/floorsensor 000101 0
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 010000 0
+force -freeze sim:/elevator/carcall 000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/reset 1 0
+run
+run
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+force -freeze sim:/elevator/reset 0 0
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel 11ns
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel {11 ns}
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/carcall 000100 0 -cancel {11 ns}
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/floorsensor 000100 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of 01_elevator.vhd was successful.
+vsim elevatorVHDL.elevator
+# vsim elevatorVHDL.elevator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading elevatorVHDL.elevator(behav)
+# Loading elevatorVHDL.counter_ncycle(behav)
+force -freeze sim:/elevator/reset 0 0
+force -freeze sim:/elevator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevator/floorsensor 000001 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0
+run
+run
+run
+run
+run
+force -freeze sim:/elevator/carcall 000001 0 -cancel {1 ns}
+run
+run
+run

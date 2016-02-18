@@ -1,0 +1,14 @@
+v 4
+file . "mux2to1_tb.vhd" "bbd8a518efe3dd9d66d455f22f2dd92aef6f6f37" "20160121185449.307":
+  entity mux_2to1_tb at 7( 154) + 0 on 44;
+  architecture arch of mux_2to1_tb at 13( 238) + 0 on 45;
+  configuration cfg_tb at 82( 1915) + 0 on 46;
+file . "mux2to1.vhd" "2fc78b384d812bdc179b8a48a4bc824c2c21feb3" "20160121185228.963":
+  entity andgate at 7( 155) + 0 on 33;
+  architecture arch of andgate at 17( 320) + 0 on 34;
+  entity orgate at 23( 413) + 0 on 35;
+  architecture arch of orgate at 33( 576) + 0 on 36;
+  entity notgate at 39( 668) + 0 on 37;
+  architecture arch of notgate at 49( 828) + 0 on 38;
+  entity mux_2to1 at 55( 923) + 0 on 39;
+  architecture arch of mux_2to1 at 64( 1066) + 0 on 40;

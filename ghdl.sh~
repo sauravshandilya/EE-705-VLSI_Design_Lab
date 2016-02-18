@@ -1,0 +1,24 @@
+#Author: Prashant Rupapara
+#Editor: Vishwanathan Iyer
+#version 1.1
+clear
+echo "Clearing the screen" 
+ghdl -a "$1.vhd"
+ghdl -a "testbench_$1.vhd"
+ghdl -m "testbench_$1" 
+if [ -z "$2" ];
+then
+	./testbench_$1 --vcd="waveform_$1.vcd"
+	
+else
+	./testbench_$1 --vcd="waveform_$1.vcd" --stop-time="$2"
+
+fi
+
+if [ -z "$3" ];
+then
+	echo "Simulating without waveforms"
+else
+	gtkwave "waveform_$1.vcd" 
+fi
+

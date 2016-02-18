@@ -1,0 +1,12 @@
+v 4
+file . "halfAdder.vhd" "dbee053e6a57cc6bbc3944bd9d61871380b5ca01" "20160120161618.216":
+  entity andgate at 1( 0) + 0 on 47;
+  architecture arch of andgate at 13( 193) + 0 on 48;
+  entity xorgate at 19( 287) + 0 on 49;
+  architecture arch of xorgate at 29( 452) + 0 on 50;
+  entity halfadder at 36( 542) + 0 on 51;
+  architecture arch of halfadder at 44( 685) + 0 on 52;
+file . "halfAdder_tb.vhd" "5787a2cfff3391e290388052b245e5d2d65649f5" "20160120161729.127":
+  entity halfadder_tb at 6( 122) + 0 on 56;
+  architecture arch of halfadder_tb at 14( 289) + 0 on 57;
+  configuration cfg_tb at 76( 2014) + 0 on 58;

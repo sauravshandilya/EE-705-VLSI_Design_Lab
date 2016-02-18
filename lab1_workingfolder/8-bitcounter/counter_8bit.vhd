@@ -1,0 +1,43 @@
+-------------------------
+-- Author: Saurav Shandilya
+-- Description: counter implementation
+-------------------------
+-- ****** Counter *******
+LIBRARY IEEE;
+use ieee.numeric_std.all;
+USE IEEE.STD_LOGIC_1164.ALL;
+--use ieee.std_logic_arith.all;
+
+entity Counter_8bit is
+      port(
+	clk : in std_logic;
+        reset : in std_logic;
+	countout : out std_logic_vector(2 downto 0)
+);
+end Counter_8bit;
+
+architecture arch of Counter_8bit is
+
+--signal count:std_logic_vector(2 downto 0);
+signal count:std_logic_vector(2 downto 0):="000";
+
+begin
+
+   PROCESS(clk,reset)
+        variable z : std_logic;   
+	BEGIN
+	IF (reset='1') THEN 
+	   count <= "000";--(others=>'0');
+	ELSIF (clk='1' AND clk'EVENT) THEN   
+	   count <= std_logic_vector(unsigned(count)+1);                
+	ELSE NULL;
+	END IF;
+   END PROCESS;
+	countout <= count;
+end arch;
+
+
+
+
+
+

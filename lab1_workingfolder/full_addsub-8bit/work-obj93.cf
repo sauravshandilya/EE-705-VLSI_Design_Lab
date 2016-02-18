@@ -1,0 +1,19 @@
+v 4
+file . "fullAdderSub8bit_TB.vhd" "e9762ee176edb054a7f087ed85507f69bcdfac79" "20160123063728.839":
+  entity fulladdsubtb at 1( 0) + 0 on 29;
+  architecture full_tb_archi of fulladdsubtb at 8( 128) + 0 on 30;
+file . "fullAdderSub8bit.vhd" "ea3c468c17847242025735854e62804b46c8d38d" "20160123062657.444":
+  entity andgate at 7( 149) + 0 on 11;
+  architecture arch of andgate at 17( 314) + 0 on 12;
+  entity xorgate at 23( 408) + 0 on 13;
+  architecture arch of xorgate at 33( 573) + 0 on 14;
+  entity halfadder at 40( 663) + 0 on 15;
+  architecture arch of halfadder at 48( 806) + 0 on 16;
+  entity orgate at 66( 1219) + 0 on 17;
+  architecture arch of orgate at 76( 1382) + 0 on 18;
+  entity fulladder at 83( 1477) + 0 on 19;
+  architecture arch of fulladder at 91( 1631) + 0 on 20;
+  entity fulladder_8bit at 112( 2220) + 0 on 21;
+  architecture arch of fulladder_8bit at 121( 2435) + 0 on 22;
+  entity fulladdsub at 147( 3113) + 0 on 23;
+  architecture arch of fulladdsub at 159( 3334) + 0 on 24;

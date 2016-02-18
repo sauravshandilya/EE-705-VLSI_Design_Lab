@@ -1,0 +1,24 @@
+-------------------------
+-- Author: Saurav Shandilya
+-- Description: fulladder implementation
+-------------------------
+
+-- ****** AND Gate *******
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+entity datapath is
+      port ( 
+	sysclk: In std_logic;		-- input to data block
+	
+	---- Signal to output	
+	boothbit : In std_logic;
+	qlsb: In std_logic;		
+	       	
+	     );
+end datapath;
+
+architecture arch of datapath is
+
+	
+end arch;
