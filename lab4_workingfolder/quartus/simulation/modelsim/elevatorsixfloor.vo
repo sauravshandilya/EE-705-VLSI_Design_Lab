@@ -1,0 +1,856 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
+
+// DATE "02/19/2016 16:51:34"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module elevatorsixfloor (
+	reset,
+	clk,
+	carcall,
+	hallcall_up,
+	hallcall_down,
+	floorsensor,
+	carled,
+	hallcall_upled,
+	hallcall_downled,
+	floorindicatorled,
+	dooropen,
+	dir_up,
+	dir_down,
+	liftmoving);
+input 	reset;
+input 	clk;
+input 	[5:0] carcall;
+input 	[4:0] hallcall_up;
+input 	[5:1] hallcall_down;
+input 	[5:0] floorsensor;
+output 	[5:0] carled;
+output 	[4:0] hallcall_upled;
+output 	[5:1] hallcall_downled;
+output 	[5:0] floorindicatorled;
+output 	dooropen;
+output 	dir_up;
+output 	dir_down;
+output 	liftmoving;
+
+// Design Ports Information
+// carcall[0]	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carcall[1]	=>  Location: PIN_AA22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carcall[2]	=>  Location: PIN_P18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carcall[3]	=>  Location: PIN_AA13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carcall[4]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carcall[5]	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_up[0]	=>  Location: PIN_U15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_up[1]	=>  Location: PIN_H13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_up[2]	=>  Location: PIN_T13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_up[3]	=>  Location: PIN_D19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_up[4]	=>  Location: PIN_E21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_down[1]	=>  Location: PIN_AA9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_down[2]	=>  Location: PIN_T20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_down[3]	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_down[4]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_down[5]	=>  Location: PIN_G21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorsensor[0]	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorsensor[1]	=>  Location: PIN_D17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorsensor[2]	=>  Location: PIN_G6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorsensor[3]	=>  Location: PIN_A20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorsensor[4]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorsensor[5]	=>  Location: PIN_H16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carled[0]	=>  Location: PIN_T17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carled[1]	=>  Location: PIN_T18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carled[2]	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carled[3]	=>  Location: PIN_W16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carled[4]	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carled[5]	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_upled[0]	=>  Location: PIN_R15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_upled[1]	=>  Location: PIN_AB11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_upled[2]	=>  Location: PIN_R6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_upled[3]	=>  Location: PIN_C15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_upled[4]	=>  Location: PIN_T19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_downled[1]	=>  Location: PIN_C8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_downled[2]	=>  Location: PIN_T9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_downled[3]	=>  Location: PIN_P8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_downled[4]	=>  Location: PIN_F13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hallcall_downled[5]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorindicatorled[0]	=>  Location: PIN_AA7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorindicatorled[1]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorindicatorled[2]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorindicatorled[3]	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorindicatorled[4]	=>  Location: PIN_F19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// floorindicatorled[5]	=>  Location: PIN_D22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// dooropen	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// dir_up	=>  Location: PIN_J9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// dir_down	=>  Location: PIN_D9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// liftmoving	=>  Location: PIN_U8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_H6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_T12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \carcall[0]~input_o ;
+wire \carcall[1]~input_o ;
+wire \carcall[2]~input_o ;
+wire \carcall[3]~input_o ;
+wire \carcall[4]~input_o ;
+wire \carcall[5]~input_o ;
+wire \hallcall_up[0]~input_o ;
+wire \hallcall_up[1]~input_o ;
+wire \hallcall_up[2]~input_o ;
+wire \hallcall_up[3]~input_o ;
+wire \hallcall_up[4]~input_o ;
+wire \hallcall_down[1]~input_o ;
+wire \hallcall_down[2]~input_o ;
+wire \hallcall_down[3]~input_o ;
+wire \hallcall_down[4]~input_o ;
+wire \hallcall_down[5]~input_o ;
+wire \floorsensor[0]~input_o ;
+wire \floorsensor[1]~input_o ;
+wire \floorsensor[2]~input_o ;
+wire \floorsensor[3]~input_o ;
+wire \floorsensor[4]~input_o ;
+wire \floorsensor[5]~input_o ;
+wire \reset~input_o ;
+wire \clk~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+
+
+// Location: IOOBUF_X89_Y4_N62
+cyclonev_io_obuf \carled[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carled[0]),
+	.obar());
+// synopsys translate_off
+defparam \carled[0]~output .bus_hold = "false";
+defparam \carled[0]~output .open_drain_output = "false";
+defparam \carled[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N45
+cyclonev_io_obuf \carled[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carled[1]),
+	.obar());
+// synopsys translate_off
+defparam \carled[1]~output .bus_hold = "false";
+defparam \carled[1]~output .open_drain_output = "false";
+defparam \carled[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y35_N62
+cyclonev_io_obuf \carled[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carled[2]),
+	.obar());
+// synopsys translate_off
+defparam \carled[2]~output .bus_hold = "false";
+defparam \carled[2]~output .open_drain_output = "false";
+defparam \carled[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X64_Y0_N2
+cyclonev_io_obuf \carled[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carled[3]),
+	.obar());
+// synopsys translate_off
+defparam \carled[3]~output .bus_hold = "false";
+defparam \carled[3]~output .open_drain_output = "false";
+defparam \carled[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X32_Y81_N2
+cyclonev_io_obuf \carled[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carled[4]),
+	.obar());
+// synopsys translate_off
+defparam \carled[4]~output .bus_hold = "false";
+defparam \carled[4]~output .open_drain_output = "false";
+defparam \carled[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y81_N36
+cyclonev_io_obuf \carled[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carled[5]),
+	.obar());
+// synopsys translate_off
+defparam \carled[5]~output .bus_hold = "false";
+defparam \carled[5]~output .open_drain_output = "false";
+defparam \carled[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y6_N22
+cyclonev_io_obuf \hallcall_upled[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_upled[0]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_upled[0]~output .bus_hold = "false";
+defparam \hallcall_upled[0]~output .open_drain_output = "false";
+defparam \hallcall_upled[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y0_N36
+cyclonev_io_obuf \hallcall_upled[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_upled[1]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_upled[1]~output .bus_hold = "false";
+defparam \hallcall_upled[1]~output .open_drain_output = "false";
+defparam \hallcall_upled[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X2_Y0_N59
+cyclonev_io_obuf \hallcall_upled[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_upled[2]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_upled[2]~output .bus_hold = "false";
+defparam \hallcall_upled[2]~output .open_drain_output = "false";
+defparam \hallcall_upled[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X62_Y81_N2
+cyclonev_io_obuf \hallcall_upled[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_upled[3]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_upled[3]~output .bus_hold = "false";
+defparam \hallcall_upled[3]~output .open_drain_output = "false";
+defparam \hallcall_upled[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N79
+cyclonev_io_obuf \hallcall_upled[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_upled[4]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_upled[4]~output .bus_hold = "false";
+defparam \hallcall_upled[4]~output .open_drain_output = "false";
+defparam \hallcall_upled[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y81_N53
+cyclonev_io_obuf \hallcall_downled[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_downled[1]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_downled[1]~output .bus_hold = "false";
+defparam \hallcall_downled[1]~output .open_drain_output = "false";
+defparam \hallcall_downled[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X30_Y0_N19
+cyclonev_io_obuf \hallcall_downled[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_downled[2]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_downled[2]~output .bus_hold = "false";
+defparam \hallcall_downled[2]~output .open_drain_output = "false";
+defparam \hallcall_downled[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y0_N19
+cyclonev_io_obuf \hallcall_downled[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_downled[3]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_downled[3]~output .bus_hold = "false";
+defparam \hallcall_downled[3]~output .open_drain_output = "false";
+defparam \hallcall_downled[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y81_N59
+cyclonev_io_obuf \hallcall_downled[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_downled[4]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_downled[4]~output .bus_hold = "false";
+defparam \hallcall_downled[4]~output .open_drain_output = "false";
+defparam \hallcall_downled[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X36_Y81_N36
+cyclonev_io_obuf \hallcall_downled[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hallcall_downled[5]),
+	.obar());
+// synopsys translate_off
+defparam \hallcall_downled[5]~output .bus_hold = "false";
+defparam \hallcall_downled[5]~output .open_drain_output = "false";
+defparam \hallcall_downled[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y0_N53
+cyclonev_io_obuf \floorindicatorled[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(floorindicatorled[0]),
+	.obar());
+// synopsys translate_off
+defparam \floorindicatorled[0]~output .bus_hold = "false";
+defparam \floorindicatorled[0]~output .open_drain_output = "false";
+defparam \floorindicatorled[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X52_Y0_N53
+cyclonev_io_obuf \floorindicatorled[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(floorindicatorled[1]),
+	.obar());
+// synopsys translate_off
+defparam \floorindicatorled[1]~output .bus_hold = "false";
+defparam \floorindicatorled[1]~output .open_drain_output = "false";
+defparam \floorindicatorled[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y36_N39
+cyclonev_io_obuf \floorindicatorled[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(floorindicatorled[2]),
+	.obar());
+// synopsys translate_off
+defparam \floorindicatorled[2]~output .bus_hold = "false";
+defparam \floorindicatorled[2]~output .open_drain_output = "false";
+defparam \floorindicatorled[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X36_Y81_N53
+cyclonev_io_obuf \floorindicatorled[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(floorindicatorled[3]),
+	.obar());
+// synopsys translate_off
+defparam \floorindicatorled[3]~output .bus_hold = "false";
+defparam \floorindicatorled[3]~output .open_drain_output = "false";
+defparam \floorindicatorled[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X76_Y81_N2
+cyclonev_io_obuf \floorindicatorled[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(floorindicatorled[4]),
+	.obar());
+// synopsys translate_off
+defparam \floorindicatorled[4]~output .bus_hold = "false";
+defparam \floorindicatorled[4]~output .open_drain_output = "false";
+defparam \floorindicatorled[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X80_Y81_N53
+cyclonev_io_obuf \floorindicatorled[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(floorindicatorled[5]),
+	.obar());
+// synopsys translate_off
+defparam \floorindicatorled[5]~output .bus_hold = "false";
+defparam \floorindicatorled[5]~output .open_drain_output = "false";
+defparam \floorindicatorled[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X2_Y0_N42
+cyclonev_io_obuf \dooropen~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(dooropen),
+	.obar());
+// synopsys translate_off
+defparam \dooropen~output .bus_hold = "false";
+defparam \dooropen~output .open_drain_output = "false";
+defparam \dooropen~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X36_Y81_N2
+cyclonev_io_obuf \dir_up~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(dir_up),
+	.obar());
+// synopsys translate_off
+defparam \dir_up~output .bus_hold = "false";
+defparam \dir_up~output .open_drain_output = "false";
+defparam \dir_up~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y81_N19
+cyclonev_io_obuf \dir_down~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(dir_down),
+	.obar());
+// synopsys translate_off
+defparam \dir_down~output .bus_hold = "false";
+defparam \dir_down~output .open_drain_output = "false";
+defparam \dir_down~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X2_Y0_N76
+cyclonev_io_obuf \liftmoving~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(liftmoving),
+	.obar());
+// synopsys translate_off
+defparam \liftmoving~output .bus_hold = "false";
+defparam \liftmoving~output .open_drain_output = "false";
+defparam \liftmoving~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y81_N92
+cyclonev_io_ibuf \carcall[0]~input (
+	.i(carcall[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\carcall[0]~input_o ));
+// synopsys translate_off
+defparam \carcall[0]~input .bus_hold = "false";
+defparam \carcall[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X64_Y0_N35
+cyclonev_io_ibuf \carcall[1]~input (
+	.i(carcall[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\carcall[1]~input_o ));
+// synopsys translate_off
+defparam \carcall[1]~input .bus_hold = "false";
+defparam \carcall[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y9_N55
+cyclonev_io_ibuf \carcall[2]~input (
+	.i(carcall[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\carcall[2]~input_o ));
+// synopsys translate_off
+defparam \carcall[2]~input .bus_hold = "false";
+defparam \carcall[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N35
+cyclonev_io_ibuf \carcall[3]~input (
+	.i(carcall[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\carcall[3]~input_o ));
+// synopsys translate_off
+defparam \carcall[3]~input .bus_hold = "false";
+defparam \carcall[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X30_Y81_N1
+cyclonev_io_ibuf \carcall[4]~input (
+	.i(carcall[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\carcall[4]~input_o ));
+// synopsys translate_off
+defparam \carcall[4]~input .bus_hold = "false";
+defparam \carcall[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X2_Y0_N92
+cyclonev_io_ibuf \carcall[5]~input (
+	.i(carcall[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\carcall[5]~input_o ));
+// synopsys translate_off
+defparam \carcall[5]~input .bus_hold = "false";
+defparam \carcall[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X60_Y0_N1
+cyclonev_io_ibuf \hallcall_up[0]~input (
+	.i(hallcall_up[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_up[0]~input_o ));
+// synopsys translate_off
+defparam \hallcall_up[0]~input .bus_hold = "false";
+defparam \hallcall_up[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X56_Y81_N1
+cyclonev_io_ibuf \hallcall_up[1]~input (
+	.i(hallcall_up[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_up[1]~input_o ));
+// synopsys translate_off
+defparam \hallcall_up[1]~input .bus_hold = "false";
+defparam \hallcall_up[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N1
+cyclonev_io_ibuf \hallcall_up[2]~input (
+	.i(hallcall_up[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_up[2]~input_o ));
+// synopsys translate_off
+defparam \hallcall_up[2]~input .bus_hold = "false";
+defparam \hallcall_up[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X86_Y81_N18
+cyclonev_io_ibuf \hallcall_up[3]~input (
+	.i(hallcall_up[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_up[3]~input_o ));
+// synopsys translate_off
+defparam \hallcall_up[3]~input .bus_hold = "false";
+defparam \hallcall_up[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X88_Y81_N36
+cyclonev_io_ibuf \hallcall_up[4]~input (
+	.i(hallcall_up[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_up[4]~input_o ));
+// synopsys translate_off
+defparam \hallcall_up[4]~input .bus_hold = "false";
+defparam \hallcall_up[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X32_Y0_N35
+cyclonev_io_ibuf \hallcall_down[1]~input (
+	.i(hallcall_down[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_down[1]~input_o ));
+// synopsys translate_off
+defparam \hallcall_down[1]~input .bus_hold = "false";
+defparam \hallcall_down[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y4_N95
+cyclonev_io_ibuf \hallcall_down[2]~input (
+	.i(hallcall_down[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_down[2]~input_o ));
+// synopsys translate_off
+defparam \hallcall_down[2]~input .bus_hold = "false";
+defparam \hallcall_down[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y81_N41
+cyclonev_io_ibuf \hallcall_down[3]~input (
+	.i(hallcall_down[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_down[3]~input_o ));
+// synopsys translate_off
+defparam \hallcall_down[3]~input .bus_hold = "false";
+defparam \hallcall_down[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y0_N75
+cyclonev_io_ibuf \hallcall_down[4]~input (
+	.i(hallcall_down[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_down[4]~input_o ));
+// synopsys translate_off
+defparam \hallcall_down[4]~input .bus_hold = "false";
+defparam \hallcall_down[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X88_Y81_N19
+cyclonev_io_ibuf \hallcall_down[5]~input (
+	.i(hallcall_down[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\hallcall_down[5]~input_o ));
+// synopsys translate_off
+defparam \hallcall_down[5]~input .bus_hold = "false";
+defparam \hallcall_down[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y38_N4
+cyclonev_io_ibuf \floorsensor[0]~input (
+	.i(floorsensor[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\floorsensor[0]~input_o ));
+// synopsys translate_off
+defparam \floorsensor[0]~input .bus_hold = "false";
+defparam \floorsensor[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X70_Y81_N1
+cyclonev_io_ibuf \floorsensor[1]~input (
+	.i(floorsensor[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\floorsensor[1]~input_o ));
+// synopsys translate_off
+defparam \floorsensor[1]~input .bus_hold = "false";
+defparam \floorsensor[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X26_Y81_N41
+cyclonev_io_ibuf \floorsensor[2]~input (
+	.i(floorsensor[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\floorsensor[2]~input_o ));
+// synopsys translate_off
+defparam \floorsensor[2]~input .bus_hold = "false";
+defparam \floorsensor[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X74_Y81_N75
+cyclonev_io_ibuf \floorsensor[3]~input (
+	.i(floorsensor[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\floorsensor[3]~input_o ));
+// synopsys translate_off
+defparam \floorsensor[3]~input .bus_hold = "false";
+defparam \floorsensor[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X50_Y81_N75
+cyclonev_io_ibuf \floorsensor[4]~input (
+	.i(floorsensor[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\floorsensor[4]~input_o ));
+// synopsys translate_off
+defparam \floorsensor[4]~input .bus_hold = "false";
+defparam \floorsensor[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X64_Y81_N1
+cyclonev_io_ibuf \floorsensor[5]~input (
+	.i(floorsensor[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\floorsensor[5]~input_o ));
+// synopsys translate_off
+defparam \floorsensor[5]~input .bus_hold = "false";
+defparam \floorsensor[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X26_Y81_N58
+cyclonev_io_ibuf \reset~input (
+	.i(reset),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\reset~input_o ));
+// synopsys translate_off
+defparam \reset~input .bus_hold = "false";
+defparam \reset~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y0_N18
+cyclonev_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y47_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

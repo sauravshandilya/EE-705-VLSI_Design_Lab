@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at elevator.v(155): always construct contains both blocking and non-blocking assignments File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/elevator.v Line: 155
+Warning (10268): Verilog HDL information at elevator.v(203): always construct contains both blocking and non-blocking assignments File: /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/elevator.v Line: 203

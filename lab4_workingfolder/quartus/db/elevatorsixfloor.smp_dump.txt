@@ -1,0 +1,8 @@
+
+State Machine - |elevatorsixfloor|curstate
+Name curstate.s_door curstate.s_stop curstate.s_idle curstate.s_init curstate.s_up 
+curstate.s_init 0 0 0 0 0 
+curstate.s_idle 0 0 1 1 0 
+curstate.s_up 0 0 0 1 1 
+curstate.s_stop 0 1 0 1 0 
+curstate.s_door 1 0 0 1 0 

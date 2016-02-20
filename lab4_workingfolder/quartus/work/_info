@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus
+vcounterncycle
+Z1 !s100 CFXC[_ZzJ^i30YdBd303A3
+Z2 ISd`5bCdfFD2Sa`l:?D[8O3
+Z3 V9Wa9gcWEj1oXFP:JW6KPn2
+Z4 d/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus
+Z5 w1455910991
+Z6 8/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/counterncycles.v
+Z7 F/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/counterncycles.v
+L0 9
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/counterncycles.v|
+Z10 o-work work -O0
+Z11 tVlog01Compat 1
+Z12 !s108 1455910997.186946
+Z13 !s107 /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/counterncycles.v|
+!i10b 1
+!s85 0
+!s101 -O0
+velevatorsixfloor
+!i10b 1
+Z14 !s100 6]>O>WKz=nJ]dSM]m`I082
+Z15 IaHW[=<RmLKcn[A1CCF_Bz0
+Z16 VIaAY720c@Dci?77f`M]P^1
+R4
+Z17 w1455984339
+Z18 8/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/elevator.v
+Z19 F/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/elevator.v
+L0 13
+R8
+r1
+!s85 0
+31
+!s108 1455984352.395557
+!s107 /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/elevator.v|
+Z20 !s90 -reportprogress|300|-work|work|/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/lab4_workingfolder/quartus/elevator.v|
+!s101 -O0
+R10
+R11

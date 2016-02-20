@@ -1,0 +1,99 @@
+|elevatorsixfloor
+reset => curstate.OUTPUTSELECT
+reset => curstate.OUTPUTSELECT
+reset => curstate.OUTPUTSELECT
+reset => curstate.OUTPUTSELECT
+reset => curstate.s_init.DATAIN
+clk => clk.IN2
+carcall[0] => ~NO_FANOUT~
+carcall[1] => ~NO_FANOUT~
+carcall[2] => ~NO_FANOUT~
+carcall[3] => ~NO_FANOUT~
+carcall[4] => ~NO_FANOUT~
+carcall[5] => ~NO_FANOUT~
+hallcall_up[0] => ~NO_FANOUT~
+hallcall_up[1] => ~NO_FANOUT~
+hallcall_up[2] => ~NO_FANOUT~
+hallcall_up[3] => ~NO_FANOUT~
+hallcall_up[4] => ~NO_FANOUT~
+hallcall_down[1] => ~NO_FANOUT~
+hallcall_down[2] => ~NO_FANOUT~
+hallcall_down[3] => ~NO_FANOUT~
+hallcall_down[4] => ~NO_FANOUT~
+hallcall_down[5] => ~NO_FANOUT~
+floorsensor[0] => ~NO_FANOUT~
+floorsensor[1] => ~NO_FANOUT~
+floorsensor[2] => ~NO_FANOUT~
+floorsensor[3] => ~NO_FANOUT~
+floorsensor[4] => ~NO_FANOUT~
+floorsensor[5] => ~NO_FANOUT~
+carled[0] <= <GND>
+carled[1] <= <GND>
+carled[2] <= <GND>
+carled[3] <= <GND>
+carled[4] <= <GND>
+carled[5] <= <GND>
+hallcall_upled[0] <= <GND>
+hallcall_upled[1] <= <GND>
+hallcall_upled[2] <= <GND>
+hallcall_upled[3] <= <GND>
+hallcall_upled[4] <= <GND>
+hallcall_downled[1] <= <GND>
+hallcall_downled[2] <= <GND>
+hallcall_downled[3] <= <GND>
+hallcall_downled[4] <= <GND>
+hallcall_downled[5] <= <GND>
+floorindicatorled[0] <= <GND>
+floorindicatorled[1] <= <GND>
+floorindicatorled[2] <= <GND>
+floorindicatorled[3] <= <GND>
+floorindicatorled[4] <= <GND>
+floorindicatorled[5] <= <GND>
+dooropen <= <GND>
+dir_up <= <GND>
+dir_down <= <GND>
+liftmoving <= <GND>
+
+
+|elevatorsixfloor|counterncycle:inst1
+clk => tempcount[0].CLK
+clk => tempcount[1].CLK
+clk => tempcount[2].CLK
+clk => tempcount[3].CLK
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+reset => tempcount[0].ACLR
+reset => tempcount[1].ACLR
+reset => tempcount[2].ACLR
+reset => tempcount[3].ACLR
+counterout[0] <= tempcount[0].DB_MAX_OUTPUT_PORT_TYPE
+counterout[1] <= tempcount[1].DB_MAX_OUTPUT_PORT_TYPE
+counterout[2] <= tempcount[2].DB_MAX_OUTPUT_PORT_TYPE
+counterout[3] <= tempcount[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|elevatorsixfloor|counterncycle:inst2
+clk => tempcount[0].CLK
+clk => tempcount[1].CLK
+clk => tempcount[2].CLK
+clk => tempcount[3].CLK
+clk => tempcount[4].CLK
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+enable => tempcount.OUTPUTSELECT
+reset => tempcount[0].ACLR
+reset => tempcount[1].ACLR
+reset => tempcount[2].ACLR
+reset => tempcount[3].ACLR
+reset => tempcount[4].ACLR
+counterout[0] <= tempcount[0].DB_MAX_OUTPUT_PORT_TYPE
+counterout[1] <= tempcount[1].DB_MAX_OUTPUT_PORT_TYPE
+counterout[2] <= tempcount[2].DB_MAX_OUTPUT_PORT_TYPE
+counterout[3] <= tempcount[3].DB_MAX_OUTPUT_PORT_TYPE
+counterout[4] <= tempcount[4].DB_MAX_OUTPUT_PORT_TYPE
+
+

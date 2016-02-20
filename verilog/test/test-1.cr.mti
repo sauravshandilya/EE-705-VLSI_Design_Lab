@@ -1,1 +1,8 @@
+/media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/verilog/test/test.v {1 {vlog -work work /media/saurav/All_stuff/M.Tech._IITB/sem-2/EE705-VLSIDesignLab/My_codes/verilog/test/test.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mycounter
 
+Top level modules:
+	mycounter
+
+} {} {}}
